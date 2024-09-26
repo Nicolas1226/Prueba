@@ -25,10 +25,16 @@ jobs:
     steps:
     - name: Checkout        
       uses: actions/checkout@v4.2.0
+  
 
     - name: LS
       run: ls -al
                  
     - name: Setup Node.js environment
-      uses: actions/setup-node@v4.0.4
-      
+      uses: actions/setup-node@v4.0.3
+      with: 
+        node-version: lastest
+
+    - name: node version
+      run: node --version
+
